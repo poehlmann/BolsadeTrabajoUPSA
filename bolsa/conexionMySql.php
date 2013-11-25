@@ -2,9 +2,9 @@
 //Clase conexion mysql
 class mysql {
 
-    var $server = "127.0.0.1";
+    var $server = "localhost";
     var $user = "root";
-    var $pass = "";
+    var $pass = "70011036";
     var $data_base = "dbprueba";
     var $conexion;
     var $flag = false;

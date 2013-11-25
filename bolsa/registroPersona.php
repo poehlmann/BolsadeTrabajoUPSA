@@ -10,17 +10,22 @@ $post = (!empty($_POST)) ? true : false;
 if($post)
 {
 include 'functions.php';
-
-$name = stripslashes($_POST['name']);
-$mail = stripslashes($_POST['email']);
+$ci = stripslashes($_POST['ci']);
+$nombre = stripslashes($_POST['nombre']);
+$apellidopaterno = stripslashes($_POST['apellidopaterno']);
+$apellidomaterno = stripslashes($_POST['apellidomaterno']);
+$telfcasa = stripslashes($_POST['telfcasa']);
+$celular = stripslashes($_POST['celular']);
+$direccion = stripslashes($_POST['direccion']);
+$email = stripslashes($_POST['email']);
 $atrab = stripslashes($_POST['areaTrab']);
 $com = stripslashes($_POST['comments']);
 
 $error = '';
 
-if(!$name)
+if((!$nombre)&&(!$apellidopaterno)&&(!$apellidomaterno))
 {
-$error .= 'Por favor escriba su nombre.<br />';
+$error .= 'Por favor escriba sus datos personales.<br />';
 }
 
 if(!$error){
@@ -29,7 +34,7 @@ if(!$error){
     $conx->connect();
     $conx->select("dbprueba");
 
-    $sqlQry="INSERT INTO personas (nombre, apellido, mail, idTrb) VALUES ('$name','$name','$mail','$atrab')";
+    $sqlQry="INSERT INTO personas (ci,nombre, apellidopaterno,apellidomaterno,telfcasa,celular,direccion, email, idTrb) VALUES ('$ci','$nombre','$apellidopaterno','$apellidomaterno','$telfcasa','$celular','$direccion','$email','$atrab')";
 
     $sqlDt = $conx->query($sqlQry)  or die('Error. '.mysql_error());
 
