@@ -28,12 +28,12 @@
    <header> 
        <div> 
           <div>                 	
-              <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1> 
+              <h1><a href="vistaconloginalumno.php"><img src="images/logo.png" alt=""></a></h1> 
               <nav>  
                 <ul class="menu">
-              <li><a href="index.html">Pagina Principal</a></li>
+              <li><a href="vistaconloginalumno.php">Pagina Principal</a></li>
             <li><a href="acercadenosotros.html">Acerca de nosotros</a></li>
-             <li class="current"><a href="empresas.html">Empresas</a></li>
+             <li class="current"><a href="vistaempresaconloginalumno.php">Empresas</a></li>
                       <li><a href="dabe.html">Dabe</a></li>
                       <li><a href="suscribite.php">Suscribite</a></li>
                   </ul>
@@ -72,14 +72,7 @@ Esta empresa produce hielo para distribucion</p>
                     <p class="text-4">Aqui encontraras todas las empresas que buscan emprendedores como tu</p>
                 </div>
             </div>
-            <div class="grid_6 box-1">
-				<img src="images/page1-img2.png" alt="">
-                <div class="extra-wrap">
-                	<h2>Registra tu empresa</h2>
-                    <p>Ingresa<a                                                                                   href="http://localhost:8080/bolsa/suscribiteempresa.php" class="link"                              target="_blank" rel="nofollow">Registrate</a> registro para                                         empresas  </p>
-                </div>
-            </div>  
-            <div class="grid_12">
+            <div class="grid_12 ">
             	<h2>Lista</h2>
                 <div class="box-7">
                 	<div>

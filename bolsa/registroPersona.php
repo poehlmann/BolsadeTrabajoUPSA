@@ -1,3 +1,4 @@
+
 <?php
 
 include 'conexionMySql.php';
@@ -15,12 +16,12 @@ $nombre = stripslashes($_POST['nombre']);
 $apellidopaterno = stripslashes($_POST['apellidopaterno']);
 $apellidomaterno = stripslashes($_POST['apellidomaterno']);
 $telfcasa = stripslashes($_POST['telfcasa']);
-$celular = stripslashes($_POST['celular']);
+$telfcelular = stripslashes($_POST['telfcelular']);
 $direccion = stripslashes($_POST['direccion']);
 $email = stripslashes($_POST['email']);
-$atrab = stripslashes($_POST['areaTrab']);
-$com = stripslashes($_POST['comments']);
-
+$sexo = stripslashes($_POST['sexo']);
+$fotoperfil = stripslashes($_POST['fotoperfil']);
+$numeroregistro = stripslashes($_POST['numeroregistro']);
 $error = '';
 
 if((!$nombre)&&(!$apellidopaterno)&&(!$apellidomaterno))
@@ -34,14 +35,16 @@ if(!$error){
     $conx->connect();
     $conx->select("dbprueba");
 
-    $sqlQry="INSERT INTO personas (ci,nombre, apellidopaterno,apellidomaterno,telfcasa,celular,direccion, email, idTrb) VALUES ('$ci','$nombre','$apellidopaterno','$apellidomaterno','$telfcasa','$celular','$direccion','$email','$atrab')";
+    $sqlQry="INSERT INTO personas (numeroregistro,ci,nombre, apellidopaterno,apellidomaterno,telfcasa,celular,direccion, email, sexo,fotoperfil) VALUES ('$numeroregistro','$ci','$nombre','$apellidopaterno','$apellidomaterno','$telfcasa','$telfcelular','$direccion','$email','$sexo','$fotoperfil')";
 
     $sqlDt = $conx->query($sqlQry)  or die('Error. '.mysql_error());
 
+     
     echo "Ok";
   }
   else
   {
+      
   echo '<div class="notification_error">'.$error.'</div>';
   }
 }

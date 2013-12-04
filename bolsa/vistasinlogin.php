@@ -50,14 +50,12 @@
    <header> 
        <div> 
           <div>                 	
-              <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1> 
+              <h1><a href="vistasinlogin.php"><img src="images/logo.png" alt=""></a></h1> 
               <nav>  
                 <ul class="menu">
-                      <li class="current"><a href="index.html">Pagina Principal</a></li>
-                      <li><a href="acercadenosotros.html">Acerca de nosotros</a></li>
-                      <li><a href="empresas.html">Empresas</a></li>
+<li class="current"><a href="vistasinlogin.php">Pagina Principal</a></li>
+          <li><a href="acercadenosotros.html">Acerca de nosotros</a></li>
                       <li><a href="dabe.html">Dabe</a></li>
-                      <li><a href="suscribite.php">Suscribite</a></li>
                       <li><a href="login.php">Login</a></li>
                   </ul>
               </nav>

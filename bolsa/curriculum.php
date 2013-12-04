@@ -204,47 +204,6 @@ if(isset($_POST['send'])){
     
 ?>
 
-<script language="JavaScript" type="text/JavaScript">
-<!--
-/*
-Función que llama la atención al usuario cuando este se deja campos sin rellenar.
-*/
-function validar(){
-    if (form.ci.value =="")
-    {
-        alert ("Debes introducir")
-        form.ci.focus()
-    }
-    else if (form.nombre.value =="")
-    {
-        alert ("Debes introducir")
-        form.nombre.focus()
-    }
-    else if (form.apellidopaterno.value =="")
-    {
-        alert ("Debes introducir")
-        form.apellidopaterno.focus()
-    }
-    else if (form.apellidomaterno.value =="")
-    {
-        alert ("Debes introducir")
-        form.apellidomaterno.focus()
-    }
-    else if (form.telfcasa.value =="")
-    {
-        alert ("Debes introducir")
-        form.telfcasa.focus()
-    }
-    else if (form.telfcelular.value =="")
-    {
-        alert ("Debes introducir")
-        form.telfcelular.focus()
-    }
-    else
-    form.submit()
-}
--->
-</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -282,7 +241,7 @@ function validar(){
                 <ul class="menu">
                       <li><a href="vistaconloginalumno.php">Pagina Principal</a></li>
                       <li><a href="acercadenosotros.html">Acerca de                                                         nosotros</a></li>
-                      <li><a href="vistaempresaconloginalumno.php">Empresas</a></li>
+                      <li><a href="vistaempresaconloginalumno.php.html">Empresas</a></li>
                       <li><a href="dabe.html">Dabe</a></li>
                       <li class="current"><a                                                         href="suscribite.php">Suscribite</a></li>
                   </ul>
@@ -294,51 +253,27 @@ function validar(){
   <!--==============================content================================-->
     <section id="content"></div>
     	<div class="container_12 top">
+        	<p class="clr-1 p2"><h2>RELLENA TU FORMULARIO A PARTIR DE LAS SIGUIENTES PAGINAS</h2></p>
         	<div class="grid_8">
                 <div class="right-1">
-                	<p class="clr-1 p2">Suscrite para recibir las ofertas de trabajo</p>
-					<p>Esta atento a tu correo electronico las nuevas ofertas de trabajo llegaran ahi</p> 	<h2>Suscribite</h2>
+					<p>Esta atento a tu correo electronico las nuevas ofertas de trabajo llegaran ahi</p> 
+            	<!--CAMBIAR ACTION-->	
             	<form id="form" name="form" action="registroPersona.php"                       method="post" enctype="multipart/form-data" >
                     <fieldset>
-                     <label for="numeroregistro">NUMERO DE REGISTRO </label>
-                    <input type="text" name="numeroregistro"                                    id="numeroregistro" size="5" maxlength="10" required >  
-                        <br>
-                        <label for="ci">CI </label>
-                         <input type="text" name="ci"                                                  id="ci" size="5" maxlength="10" required >  
-                        <br>
-                      <label for="nombre">NOMBRE</label>
-                    <input type="text"name="nombre" id="nombre"  size="10"                           maxlength="15"required > 
-                        <br>
-                    <label for="apellidopaterno">APELLIDO PATERNO</label>
-                        <input type="text" name="apellidopaterno"                                      id="apellidopaterno" size="10" maxlength="15"                                     required>
-                        <br>
-                     <label for="apellidomaterno">APELLIDO MATERNO</label>
-                        <input  type="text" name="apellidomaterno"                                  id="apellidomaterno"size="10"maxlength="15"required>                 
-                        <br>
-                    <label for="email">EMAIL</label>
-                    <input type="text" name="emai"id="email"size="10"                                 required>
-                        <br>
-                      <label for="telfcasa">TELF DOMICILIO  </label>
-                        <input type="text" name="telfcasa"                                         id="telfcasa"  size="10" maxlength="8"required>
-                        <br>
-                        
-                        <label for="telfcelular">TELF CELULAR</label>
-                        <input type="text"name="telfcelular"id="telfcelular"                             size="10" maxlength="9"required>
-                        <br>       
-				</div>
-            </div>
-             <br><br><br>
-             <div class="grid_4">
-            FOTO DE PERFIL: <input type="file" name="fotoperfil"required>
-                 <br><br>
-                  SEXO:<br>
-                            <input type=radio name="sexo" value="masculino"                                 >MASCULINO<br>
-                            <input type=radio name="sexo"                                               value="femenino">FEMENINO<br>
-                 <br>
-                <label for="direccion">DIRECCION</label> 
+                    <label for="presentacion">PRESENTACION</label>  
+                     <label for="presentacion">Este sera el primer texto que leera el empleador sobre ti, describe en pocas palabras tu perfil, tus cualidades destacadas y tu objetivo laboral</label> 
                  <br>
                  <textarea 
-                 name="direccion"id="direccion"rows="4" cols="30">                              </textarea> 
+                 name="presentacion"id="presentacion"rows="10" cols="10">                   </textarea> 
+                 <br><br>   
+                </div>
+            </div>
+        <div class="grid_4">
+                 <br>
+            <label for="exptectativasalarial">EXPETECTATIVA LABORAL</label>
+                     <br><input                                                                         type="text"name="exptectativasalarial"
+                            id="exptectativasalarial"                                                     size="20" maxlength="9"required>
+                        <br>    
                 <br><br>
                  <input type="submit" value="ENVIAR" name="Enviar" /> 
 
@@ -348,8 +283,8 @@ function validar(){
                     <br>
                  <img src="images/page1-img2.png" alt="">
                 <div class="extra-wrap">
-                	 <h2>AHORA RELLENE SU CURRICULUM </h2>
-                   <p><a                          href="http://localhost:8080/bolsa/curriculum.php" class="link"                              target="_blank" rel="nofollow">ingresa</a> </p>
+                	 <h2>PASE A LA SIGUIENTE PAGINA </h2>
+                   <p><a                          href="http://localhost:8080/bolsa/experienciaslaborales.php" class="link"                              target="_blank" rel="nofollow">ingresa</a> </p>
                 </div> 
              </div>
            </fieldset>  

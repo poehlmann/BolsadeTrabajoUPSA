@@ -3,10 +3,11 @@
     
     
 <script type="text/javascript">
+
 function validarForm(formulario) {
-  if(formulario.nombre.value.length==0) { //comprueba que no esté vacío
+  if(formulario.titulo.value.length==0) { //comprueba que no esté vacío
     formulario.nombre.focus();   
-    alert('No has escrito tu nombre'); 
+    alert('No has escrito tu titulo'); 
     return false; //devolvemos el foco
   }
   if(formulario.email1.value.length==0) { //comprueba que no esté vacío
@@ -20,7 +21,7 @@ function validarForm(formulario) {
     
     
 <head>
-    <title>REGISTRO DE EMPRESA</title>
+    <title>REGISTRO DE ESTUDIOS</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
@@ -47,12 +48,12 @@ function validarForm(formulario) {
    <header> 
        <div> 
           <div>                 	
-              <h1><a href="vistaconloginempresa.php"><img src="images/logo.png" alt=""></a></h1> 
+              <h1><a href="vistaconloginalumno.php"><img src="images/logo.png" alt=""></a></h1> 
               <nav>  
                 <ul class="menu">
-                      <li><a href="vistaconloginempresa.php">Pagina Principal</a></li>
+                      <li><a href="vistaconloginalumno.php">Pagina Principal</a></li>
                       <li><a href="acercadenosotros.html">Acerca de nosotros</a></li>
-                      <li><a href="empresas.html">Empresas</a></li>
+                      <li><a href="vistaempresaconloginalumno.php">Empresas</a></li>
                       <li><a href="dabe.html">Dabe</a></li>
                       <li class="current"><a href="suscribite.php">Suscribite</a></li>
                   </ul>
@@ -65,47 +66,55 @@ function validarForm(formulario) {
     <section id="content"></div>
     	<div class="container_12 top">
             <div class="grid_8">
-            	<h2>Suscribite</h2>
-            	<form id="form" action="registroempresa.php" method="post" onsubmit="return validarForm(this);">
-                    <fieldset>
-                        
-                        <label for="ci">CIF<input type="text" name="cif" id="cif"  required></label>
-                      
-                        <label for="nombre">NOMBRE DE LA EMPRESA<input type="text" name="nombre" id="nombre"  required> </label>
-                       
-                        <label for="dominiosocial">DOMINIO SOCIAL<input type="text" name="dominiosocial" id="dominiosocial" value="" required></label>
-                       
-                        <label for="numerodetrabajadores">NUMERO DE TRABAJADORES<input type="number" name="numerodetrabajadores" id="numerodetrabajadores"  value="" required></label>
-                        <br>
-                        WEB  
-                        <label for="web"><input type="text" name="web" id="web" value="" required></label>
-                         
-                      <label for="telfempresa">TELF EMPRESA<input type="text" name="telfempresa" id="telfempresa" value="" required></label>
-                        
-                        <label for="sector">SECTOR DE LA EMPRESA     
-      <td><select name="sector" >
-          <option value="1">Comercio</option>
-          <option value="2">Artes Graficas</option>
-          <option value="3">Desarrollo Web</option>
-          <option value="4">....</option>
-          </select></td></label>
+            	<h2>IDIOMAS</h2>
+            	<!--CAMBIAR ACTION-->
+            	<form id="form1" name="form1" action="registroPersona.php"                       method="post" enctype="multipart/form-data" >
 
-                        
-                      <label for="descripcion">DESCRIPCION<textarea name="descripcion" id="descripcion" rows="3" cols="5" ></textarea></label>
-                        
+                    <fieldset>
+                      <br>
+                        <label for="idioma">IDIOMA  <br>   
+                      <td><select name="idioma" >
+                          <option value="0">          </option>
+                          <option value="1">Aleman</option>
+                          <option value="2">Frances</option>
+                          <option value="3">Ingles</option>
+                          <option value="4">Español</option>
+                          </select></td></label>
+                       <br>
+                         <hr></hr> 
+                        <label for="escrito">ESCRITO  <tr></tr>   
+                      <td><select name="escrito" >
+                          <option value="0">          </option>
+                          <option value="1">Basico</option>
+                          <option value="2">Intermedio</option>
+                          <option value="3">Avanzado</option>
+                          </select></td></label>
+            
+                        <label for="idioma">ORAL     
+                      <td><select name="idioma" >
+                          <option value="0">          </option>
+                         <option value="1">Basico</option>
+                          <option value="2">Intermedio</option>
+                          <option value="3">Avanzado</option>
+                          </select></td></label>
+                       <br><br><br>
                        
+                        <input type="submit" value="ENVIAR" name="Enviar" /> 
+
+                 <div class="btns"><a href="#" class="button">Limpiar</a>
+                <a href="#" class="button" type=submit                                     onClick="document.getElementById('form').submit()">Enviar</a>
+            </div>
             </div>
             <div class="grid_4">
-                <br><br><br>
-         <label for="nombredelencargado">NOMBRE DEL ENCARGADO</label>
-                  <input type="text" name="nombredelencargado" id="nombredelencargado"  required></td>
+               
+                     <br>
                     <br>
-                <label for="correodelencargado">CORREO DEL ENCARGADO
-                     <td></td><input type="text" name="correodelencargado" id="correodelencargado" required></td></label>
-                <br>
-                <input type="submit" value="ENVIAR" name="Enviar" /> 
-                <div class="btns"><a href="#" class="button">Limpiar</a><a href="#" class="button" onClick="document.getElementById('form').submit()">Enviar</a></div>
-                </div>
+                 <img src="images/page1-img2.png" alt="">
+                <div class="extra-wrap">
+                	 <h2>PASE A LA SIGUIENTE PAGINA </h2>
+                   <p><a                          href="http://localhost:8080/bolsa/informatica.php" class="link"                              target="_blank" rel="nofollow">ingresa</a> </p>        
+            </div>
+             </div>
              </fieldset>  
             </form> 
             <div class="clear"></div>

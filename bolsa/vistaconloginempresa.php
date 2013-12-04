@@ -50,14 +50,13 @@
    <header> 
        <div> 
           <div>                 	
-              <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1> 
+              <h1><a href="vistaconloginempresa.php"><img src="images/logo.png" alt=""></a></h1> 
               <nav>  
                 <ul class="menu">
-                      <li class="current"><a href="index.html">Pagina Principal</a></li>
-                      <li><a href="acercadenosotros.html">Acerca de nosotros</a></li>
+<li class="current"><a href="vistaconloginempresa.php">Pagina Principal</a></li>
+          <li><a href="acercadenosotros.html">Acerca de nosotros</a></li>
                       <li><a href="empresas.html">Empresas</a></li>
                       <li><a href="dabe.html">Dabe</a></li>
-                      <li><a href="suscribite.php">Suscribite</a></li>
                       <li><a href="login.php">Login</a></li>
                   </ul>
               </nav>
@@ -84,13 +83,7 @@
                     <p>Somos el centro Dabe <a href="http://localhost:8080/bolsa/dabe.html" class="link" target="_blank">Dabe</a>                         </p>
                 </div>
             </div>  
-            <div class="grid_6 box-1">
-				<img src="images/page1-img2.png" alt="">
-                <div class="extra-wrap">
-                	<h2>Registrate</h2>
-                    <p>Ingresa con tu numero de registro<a href="http://localhost:8080/bolsa/suscribite.php" class="link" target="_blank" rel="nofollow">Registrate</a> registro para alumnos y ex-alumnos </p>
-                </div>
-            </div>  
+             
             <div class="grid_12 box-2">
             	<div>
                     <p class="text-3">Bienvenido <span>a la bolsa de trabajo</span> UPSA!</p>
